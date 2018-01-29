@@ -1,0 +1,66 @@
+#headerimage
+{
+	margin-left: 10%;
+	
+	background-color: #D0021B;
+	color: white;
+	border-radius:20px;
+	text-align: center;
+}
+#headtext
+{
+	margin-left: 10px;
+	font-weight: 2px;
+	color:#777777;
+}
+.list
+{
+	margin-top: 5%;
+	text-align: left;
+	
+}
+li
+{
+	margin-left: 10px;
+	padding-bottom:8px;
+}
+li:hover
+{
+	cursor: pointer;
+}
+div div
+{
+	border:none;
+}
+header
+{
+	height: 10%;
+	width: 100%;
+	background-color: #F8F8F8;
+	position:fixed;
+	float:top;
+	border:1px solid #EEEEEE;
+}
+html,body {
+    margin:0;
+    padding:0;
+}
+a
+{
+	font-size: 15px;
+	color:#777777;
+	margin-left: 20px;
+}
+.content
+{
+	margin-top: 10%;
+	border:none;
+	display: inline;
+}
+#heading
+{
+	height: 23px;
+	width: 80%;
+	text-align: left;
+	border-bottom: 1px solid #EEEEEE;
+}

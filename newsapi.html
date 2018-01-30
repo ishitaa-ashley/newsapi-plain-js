@@ -47,8 +47,15 @@ p
 		<p><span id="headerimage">5</span><span id="headtext">The Top Five</span> <a href="" >NEWS</a></p>
 	</header>
 
-	<div id="content" class="content"><div id="heading">TOP FIVE NEWS</div>
+	<div id="content" class="content">
+		<div id="heading">Top five news</div>
 		<div><ol class="list"></ol></div>
+		<div id="heading">Five top</div>
+		<div><ol class="list2"></ol></div>
+		<div id="heading">news 5</div>
+		<div><ol class="list3"></ol></div>
+		<div id="heading">news now 5</div>
+		<div><ol class="list4"></ol></div>
 
 	</div>
 
@@ -72,6 +79,11 @@ var arr , myArray;
         if (response.status !== 200) {
         console.log('Looks like there was a problem. Status Code: ' +
           response.status);
+       var li=document.createElement("div");
+        var ul=document.querySelector(".list");
+        li.innerHTML="<h3>Some Error occurred</h3>";
+        ul.appendChild(li);
+        
         return;
       }
 
@@ -85,7 +97,7 @@ var arr , myArray;
 
 
  	  	var div=document.getElementById("content");
-    	var ul=document.querySelector("ol");
+    	var ul=document.querySelector(".list");
     	for(var i=0;i<myArray.length;i++)
     	{
     	var li=document.createElement("li");
@@ -102,6 +114,67 @@ var arr , myArray;
 
     	
 })
+    .catch(function() {
+    	var li=document.createElement("div");
+        var ul=document.querySelector(".list");
+        li.innerHTML="<h3>Some Error occurred</h3>";
+        ul.appendChild(li);
+
+    })
+
+
+    
+
+    var url = 'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=14801299878447febf1405804ba97b23';
+		var req = new Request(url);
+		fetch(req)
+    	.then(function(response) {
+        //console.log(response.json());
+        if (response.status !== 200) {
+        console.log('Looks like there was a problem. Status Code: ' +
+          response.status);
+       var li=document.createElement("div");
+        var ul=document.querySelector(".list2");
+        li.innerHTML="<h3>Some Error occurred</h3>";
+        ul.appendChild(li);
+        
+        return;
+      }
+
+    
+    response.json().then(function(data) {
+    	
+        
+        	console.log(data);
+        	myArray=arr=Array.from(data.articles.splice(1,5));
+        	console.log(myArray);
+
+
+ 	  	var div=document.getElementById("content");
+    	var ul=document.querySelector(".list2");
+    	for(var i=0;i<myArray.length;i++)
+    	{
+    	var li=document.createElement("li");
+    	li.setAttribute("id", `${myArray[i].url}`);
+    	li.setAttribute("onclick" , "showurl(this.id)");
+    	var disp = (myArray[i].title);
+    	var newcontent=document.createTextNode(disp);
+    	li.appendChild(newcontent);
+    	ul.appendChild(li);
+    	console.log(disp);
+    }
+        	
+	});
+
+    	
+})
+    .catch(function() {
+    	var li=document.createElement("div");
+        var ul=document.querySelector(".list2");
+        li.innerHTML="<h3>Some Error occurred</h3>";
+        ul.appendChild(li);
+
+    })
 }
  
  function showurl(clicked_id)

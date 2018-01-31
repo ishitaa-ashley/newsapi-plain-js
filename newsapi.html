@@ -4,6 +4,11 @@
 	<title>newsapi</title>
 	<link href="newsapi.css" rel="stylesheet" type="text/css">
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 <style>
 body
 {
@@ -30,8 +35,7 @@ p
 	border:3px solid black;
 	
 	text-align: center;
-	width: 600px;
-	height: 200px;
+	
 	margin:3px auto 3px auto;
 }
 
@@ -47,15 +51,27 @@ p
 		<p><span id="headerimage">5</span><span id="headtext">The Top Five</span> <a href="" >NEWS</a></p>
 	</header>
 
-	<div id="content" class="content">
-		<div id="heading">US NEWS</div>
-		<div><ol class="list"></ol></div>
-		<div id="heading">BBC NEWS</div>
-		<div><ol class="list2"></ol></div>
-		<div id="heading">THE WASHINGTON POST</div>
-		<div><ol class="list3"></ol></div>
-		<div id="heading">NEWYORK MAGAZINE</div>
-		<div><ol class="list4"></ol></div>
+	<div id="content pagewrapper" class="content container">
+		<div class="row">
+			<div class="col-lg-6 col-md-12">
+		<p id="heading">US NEWS</p>
+		<ol class="list"></ol>
+	</div>
+	<div class="col-lg-6 col-md-12">
+		<p id="heading">BBC NEWS</p>
+		<ol class="list2"></ol>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-12">
+		<p id="heading">THE WASHINGTON POST</p>
+		<ol class="list3"></ol>
+	</div>
+		<div class="col-lg-6 col-md-12">
+		<p id="heading">NEWYORK MAGAZINE</p>
+		<ol class="list4"></ol>
+	</div>
+	</div>
 
 	</div>
 

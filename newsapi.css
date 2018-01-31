@@ -21,7 +21,7 @@
 }
 li
 {
-	margin-left: 10px;
+	margin-left: 0px;
 	padding-bottom:8px;
 }
 li:hover
@@ -60,10 +60,19 @@ a
 }
 #heading
 {
-	height: 23px;
+	height: 28px;
 	width: 80%;
 	text-align: left;
 	border-bottom: 1px solid #EEEEEE;
-	font-size: 25px;
+	font-size: 20px;
 	color:red;
 }
+div div div
+{
+	display: inline;
+}
+/*#pageWrapper {
+
+position: absolute;
+overflow: auto;
+}*/
